@@ -176,9 +176,12 @@ actions:
     mkdir -p /opt/pihole_exporter
     mv /usr/share/pihole_exporter/pihole_exporter /opt/pihole_exporter/
 
+    chmod +x /opt/pihole_exporter/pihole_exporter
+
     echo "PIHOLE_PROTOCOL=" > /opt/pihole_exporter/.env
     echo "PIHOLE_HOSTNAME=" >> /opt/pihole_exporter/.env
     echo "PIHOLE_API_TOKEN=" >> /opt/pihole_exporter/.env
+    echo "PORT=" >> /opt/pihole_exporter/.env
 
     chown -R pihole_exporter: /opt/pihole_exporter
   releases:
